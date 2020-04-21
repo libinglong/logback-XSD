@@ -138,6 +138,20 @@
 
 	<xsd:complexType name="Appender">
 		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="discardingThreshold" minOccurs="0" maxOccurs="1" type="xsd:int">
+				<xsd:annotation>
+					<xsd:documentation source="description">
+						用于AsyncAppender http://logback.qos.ch/manual/appenders.html
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="queueSize" minOccurs="0" maxOccurs="1" type="xsd:int">
+				<xsd:annotation>
+					<xsd:documentation source="description">
+						用于AsyncAppender http://logback.qos.ch/manual/appenders.html
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="target" minOccurs="0" maxOccurs="1" type="Target"/>
 			<xsd:element name="file" minOccurs="0" maxOccurs="1" type="xsd:string"/>
 			<xsd:element name="withJansi" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
